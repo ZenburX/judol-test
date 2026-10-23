@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monitor Judol — Dashboard</title>
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 2rem; max-width: 1100px; color: #1b1b1b; }
+        h1 { font-size: 1.4rem; } h2 { font-size: 1.1rem; margin-top: 2.5rem; }
+        button { padding: .5rem 1rem; border: 1px solid #555; background: #fff; cursor: pointer; border-radius: 6px; }
+        button:hover { background: #f0f0f0; }
+        table { border-collapse: collapse; width: 100%; margin-top: .75rem; }
+        th, td { border: 1px solid #ddd; padding: .4rem .6rem; font-size: .85rem; text-align: left; }
+        .badge { display: inline-block; padding: .15rem .5rem; border-radius: 999px; color: #fff; font-size: .75rem; }
+        .badge.judol { background: #c0392b; } .badge.bersih { background: #1e8e3e; }
+        textarea { width: 100%; min-height: 80px; font-family: monospace; font-size: .85rem; padding: .5rem; }
+        pre.log { background: #f4f4f4; padding: .75rem; font-size: .78rem; max-height: 200px; overflow: auto; white-space: pre-wrap; }
+        .thumb { width: 90px; cursor: zoom-in; }
+        details img { max-width: 100%; border: 1px solid #ccc; margin-top: .5rem; }
+        .flash { padding: .6rem .9rem; border-radius: 6px; background: #e7f3e7; margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+<h1>🖼️ Monitor Judol — Dashboard</h1>
+
+    <div class="flash" style="background:#fbeaea">
+        Selesai dengan error (cek log).
+    </div>
+    <pre class="log">  #  C:\Program Files\nodejs\node.exe[20004]: std::shared_ptr&lt;InitializationResultImpl&gt; __cdecl node::InitializeOncePerProcessInternal(const std::vector&lt;std::string&gt; &amp;, ProcessInitializationFlags::Flags) at src\node.cc:1224
+  #  Assertion failed: ncrypto::CSPRNG(nullptr, 0)
+----- Native stack trace -----
+ 1: 00007FF6DF28342A node::MultiIsolatePlatform::DisposeIsolate+749418
+ 2: 00007FF6DF2E4D73 node::InitializeOncePerProcess+3171
+ 3: 00007FF6DF2E510D node::Start+445
+ 4: 00007FF6DF39D222 node::AsyncResource::CallbackScope::CallbackScope+610
+ 5: 00007FF6DF5BBBB4 node::AsyncResource::CallbackScope::CallbackScope+2223092
+ 6: 00007FFD8DFDE957 BaseThreadInitThunk+23
+ 7: 00007FFD902C7C1C RtlUserThreadStart+44</pre>
+
+<h2>1. Daftar URL</h2>
+<form method="post" action="/urls">
+    <input type="hidden" name="_token" value="GpyE0n6n0XCLOUo5TnvEuyUlrbXItkoNd99BoilB" autocomplete="off">    <textarea name="urls" placeholder="https://contoh.com">https://www.kemenpar.go.id/
+https://bob.kemenpar.go.id/
+https://zapoa.org/membership/
+https://expressroofing.net/aboutexpress/</textarea>
+    <button type="submit">Simpan URL</button>
+</form>
+
+<h2>2. Jalankan</h2>
+<form method="post" action="/run/screenshot" style="display:inline"><input type="hidden" name="_token" value="GpyE0n6n0XCLOUo5TnvEuyUlrbXItkoNd99BoilB" autocomplete="off">    <button type="submit">📸 Screenshot (Playwright)</button>
+</form>
+<form method="post" action="/run/classify" style="display:inline;margin-left:.5rem"><input type="hidden" name="_token" value="GpyE0n6n0XCLOUo5TnvEuyUlrbXItkoNd99BoilB" autocomplete="off">    <button type="submit">🤖 Klasifikasi Judol</button>
+</form>
+
+<h2>3. Screenshot</h2>
+<table>
+    <tr><th>Gambar</th><th>Preview</th></tr>
+            <tr>
+            <td>bob_kemenpar_go_id.png</td>
+            <td><details><summary><img class="thumb" src="/shots/bob_kemenpar_go_id.png" alt=""></summary>
+                <img src="/shots/bob_kemenpar_go_id.png" alt="bob_kemenpar_go_id.png"></details></td>
+        </tr>
+            <tr>
+            <td>www_kemenpar_go_id.png</td>
+            <td><details><summary><img class="thumb" src="/shots/www_kemenpar_go_id.png" alt=""></summary>
+                <img src="/shots/www_kemenpar_go_id.png" alt="www_kemenpar_go_id.png"></details></td>
+        </tr>
+            <tr>
+            <td>zapoa_org.png</td>
+            <td><details><summary><img class="thumb" src="/shots/zapoa_org.png" alt=""></summary>
+                <img src="/shots/zapoa_org.png" alt="zapoa_org.png"></details></td>
+        </tr>
+    </table>
+
+<h2>4. Hasil Klasifikasi</h2>
+<table>
+    <tr><th>Gambar</th><th>Status</th><th>Skor</th><th>Area</th><th>Lokasi</th><th>Preview</th></tr>
+            <tr>
+            <td>bob_kemenpar_go_id.png</td>
+            <td><span class="badge bersih">BERSIH</span></td>
+            <td>0.193</td>
+            <td>tile</td>
+            <td><code>x=384, y=0, 512×512</code></td>
+            <td><details><summary>lihat</summary>
+                <img src="/shots/bob_kemenpar_go_id.png" alt="">
+                <p>Area dicurigai: 384,0 (tile atas kiri)</p>
+            </details></td>
+        </tr>
+            <tr>
+            <td>www_kemenpar_go_id.png</td>
+            <td><span class="badge bersih">BERSIH</span></td>
+            <td>0.509</td>
+            <td>element</td>
+            <td><code>x=432, y=240, 832×468</code></td>
+            <td><details><summary>lihat</summary>
+                <img src="/shots/www_kemenpar_go_id.png" alt="">
+                <p>Area dicurigai: 432,240 (tile atas kiri)</p>
+            </details></td>
+        </tr>
+            <tr>
+            <td>zapoa_org.png</td>
+            <td><span class="badge judol">JUDOL</span></td>
+            <td>1</td>
+            <td>tile</td>
+            <td><code>x=0, y=384, 512×512</code></td>
+            <td><details><summary>lihat</summary>
+                <img src="/shots/zapoa_org.png" alt="">
+                <p>Area dicurigai: 0,384 (tile atas kiri)</p>
+            </details></td>
+        </tr>
+    </table>
+</body>
+</html>

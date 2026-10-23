@@ -1,0 +1,57 @@
+[
+  {
+    "gambar": "bob_kemenpar_go_id.png",
+    "is_judol": false,
+    "skor": 0.277,
+    "skor_element": 0.046,
+    "keyword_judol": 0,
+    "area_teratas": "tile",
+    "lokasi": null,
+    "label_teratas": "e-commerce or product sale banner"
+  },
+  {
+    "gambar": "expressroofing_net.png",
+    "is_judol": true,
+    "skor": 0.994,
+    "skor_element": 0.929,
+    "keyword_judol": 47,
+    "area_teratas": "tile",
+    "lokasi": {
+      "x": 384,
+      "y": 2304,
+      "w": 512,
+      "h": 512
+    },
+    "label_teratas": "gambling website popup, poker chips and dice"
+  },
+  {
+    "gambar": "www_kemenpar_go_id.png",
+    "is_judol": false,
+    "skor": 0.963,
+    "skor_element": 0.096,
+    "keyword_judol": 0,
+    "area_teratas": "tile",
+    "lokasi": {
+      "x": 776,
+      "y": 4608,
+      "w": 512,
+      "h": 512
+    },
+    "label_teratas": "gambling website popup, poker chips and dice"
+  },
+  {
+    "gambar": "zapoa_org.png",
+    "is_judol": true,
+    "skor": 1,
+    "skor_element": 0.99,
+    "keyword_judol": 0,
+    "area_teratas": "tile",
+    "lokasi": {
+      "x": 0,
+      "y": 384,
+      "w": 512,
+      "h": 512
+    },
+    "label_teratas": "slot machine game interface, casino jackpot banner with gold coins and money"
+  }
+]
