@@ -1,5 +1,4 @@
-@parent
-
+@php $total = count($results); $filtered = $results; @endphp
 @if ($total == 0)
     <div class="no-data">Belada ada riwayat eksekusi. Jalankan screenshot atau klasifikasi terlebih dahulu.</div>
 @else

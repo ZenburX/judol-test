@@ -45,10 +45,10 @@ Route::post('/run/{type}', function (string $type) {
 
 // Simpan daftar URL
 Route::post('/urls', function (\Illuminate\Http\Request $request) {
-    $urls = collect(preg_split('/[\r\n]+/', trim($request->input('urls', '')))
+    $urls = collect(preg_split('/[\r\n]+/', trim($request->input('urls', ''))))
         ->map(fn ($u) => trim($u))
         ->filter(fn ($u) => filter_var($u, FILTER_VALIDATE_URL))
-        ->values());
+        ->values();
     $body = "// Daftar web yang mau di-screenshot. Di-generate otomatis dari dashboard.\nmodule.exports = "
         .json_encode($urls->all(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES).";\n";
     file_put_contents(base_path('scripts/urls.cjs'), $body);
@@ -96,12 +96,13 @@ Route::get('/setting', function () use ($classificationFile, $shotDir) {
 });
 
 // Ekspor CSV
-Route::get('/export-csv', function ($classificationFile) use ($shotDir) {
+Route::get('/export-csv', function () use ($classificationFile) {
     $results = file_exists($classificationFile) ? json_decode(file_get_contents($classificationFile), true) : [];
     if (empty($results)) {
         return back()->with('flash', 'Belum ada data untuk dieksport.');
     }
-    $fp = fopen('storage:classification/export.csv', 'w');
+    $outFile = storage_path('classification/export.csv');
+    $fp = fopen($outFile, 'w');
     fputcsv($fp, ['gambar', 'is_judol', 'skor', 'keyword_judol', 'lokasi_x', 'lokasi_y', 'label_teratas']);
     foreach ($results as $r) {
         $loc = $r['lokasi'] ?? null;
@@ -116,6 +117,6 @@ Route::get('/export-csv', function ($classificationFile) use ($shotDir) {
         ]);
     }
     fclose($fp);
-    return response()->download(storage_path('app/classification/export.csv'))
+    return response()->download($outFile)
         ->deleteFileAfterSend(true);
 });

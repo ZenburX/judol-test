@@ -16,7 +16,7 @@
         <a href="/histori">Histori</a>
         <a href="/setting">Setting</a>
     </div>
-</div>
+</nav>
 
 <div class="container">
     @if ($content == 'laporan')
