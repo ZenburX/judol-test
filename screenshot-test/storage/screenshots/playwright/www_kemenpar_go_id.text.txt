@@ -16,18 +16,18 @@ PPID Kementerian Pariwisata
 Kunjungi PPID Kementerian Pariwisata untuk mendapatkan info lebih lanjut seputar Pariwisata Indonesia
 Selengkapnya
 BERITA DAN FEATURES PARIWISATA
+Siaran Pers: Kemenpar Dukung OGFC Unite 2027 Jadi Penggerak Wisata Olahraga Indonesia
+Jakarta, 23 Oktober 2026 - Kementerian Pariwisata (Kemenpar) mendukung penyelenggaraan OGFC Unite 2027 yang digagas Offside Corp untuk menjadikan wisata olahraga (sport tourism) sebagai salah satu penggerak pertumbuhan pariwisata Indonesia.
+K
+Kementerian Pariwisata RI
+Sabtu, 24 Oktober 2026
+126
 Modul Pelatihan Berbasis Kompetensi Tahun 2026
 Mendukung ekosistem pelatihan berbasis kompetensi di sektor pariwisata, Deputi Bidang Sumber Daya dan Kelembagaan u.p. Asisten Deputi Peningkatan Kapasitas Sumber Daya Manusia Industri telah menyusun modul yang terdiri atas: 1. Arung Jeram 2. Pemanduan Wisata Gunung 3. Pemanduan Geowisata 4. Pemanduan Ekowisata
 K
 Kementerian Pariwisata RI
-Kamis, 22 Oktober 2026
-8
-Kemenpar Sukses Gelar Mega FAM Trip WITF 2026 Ajak Mitra Global Rasakan Indonesia yang Autentik
-Jakarta, 21 Oktober 2026 - Kementerian Pariwisata (Kemenpar) sukses menyelenggarakan Mega Familiarization Trip (Mega FAM Trip) pada 10–17 Oktober 2026 sebagai bagian dari rangkaian Wonderful Indonesia Tourism Fair (WITF) 2026 untuk memperkenalkan pengalaman wisata autentik Indonesia kepada mitra industri perjalanan internasional sekaligus membuka peluang kerja sama bisnis pariwisata.
-K
-Kementerian Pariwisata RI
-Kamis, 22 Oktober 2026
-37
+Sabtu, 24 Oktober 2026
+204
 Berita Lainnya
 PENGUMUMAN
 Pengumuman Hasil Akhir Program Pemagangan Lulusan Perguruan Tinggi (Pemagangan Nasional) Batch 2 Kementerian Pariwisata Republik Indonesia Tahun 2026
@@ -64,6 +64,18 @@ Pilih Tahun
 
 Total Kunjungan Wisatawan Mancanegara 15.386.646
 
+1.156.012
+1.022.894
+984.769
+1.164.539
+1.306.000
+1.417.096
+1.481.346
+1.505.220
+1.394.910
+1.348.993
+1.199.007
+1.405.860
 Selengkapnya
 Januari 2025
 1.156.012 Kunjungan
@@ -145,6 +157,15 @@ Pilih Tahun
 
 Total Perjalanan Wisatawan Nusantara 1.200.332.559
 
+102.998.948
+90.497.800
+128.587.806
+97.673.863
+105.115.881
+100.197.984
+93.566.867
+96.001.666
+105.978.131
 Selengkapnya
 Januari
 102.998.948 Perjalanan
@@ -178,93 +199,93 @@ Keterangan:
 Mandalika
 Sirkuit Internasional Mandalika adalah sebuah sirkuit balap yang terletak di Kawasan Ekonomi Khusus Mandalika di Desa Kuta, Lombok Tengah, Nusa Tenggara Barat. Sirkuit ini memiliki panjang lintasan 4,31 km dengan 17 tikungan.
 MANDALIKA
-Cerah Berawan
+Berawan
 Suhu:
-28°C
+25°C
 Kelembapan:
-71%
-2026-10-22 17:00:00
+87%
+2026-10-25 21:00:00
 Labuan Bajo
 Labuan Bajo merupakan sebuah surga tersembunyi yang ada di Indonesia bagian timur. Desa ini terletak di Kecamatan Komodo, Kabupaten Manggarai Barat, Provinsi Nusa Tenggara Timur yang berbatasan langsung dengan Nusa Tenggara Barat dan dipisahkan oleh Selat Sape.
 LABUAN BAJO
-Cerah Berawan
+Cerah
 Suhu:
-29°C
+27°C
 Kelembapan:
-71%
-2026-10-22 17:00:00
+87%
+2026-10-25 21:00:00
 Likupang
 Surga Tersembunyi di Sulawesi Utara. Mungkin jika menyebut destinasi favorit di Sulawesi Utara nama Manado dan Bunaken akan sering muncul. Memang, nama Likupang masih sangat jarang diketahui wisatawan.
 LIKUPANG
-Cerah Berawan
+Udara Kabur
 Suhu:
-29°C
+27°C
 Kelembapan:
-65%
-2026-10-22 17:00:00
+89%
+2026-10-25 21:00:00
 Danau Toba
 Danau Toba adalah sebuah keajaiban alam yang sangat menakjubkan. Danau ini diperkirakan terbentuk dari letusan dahsyat sebuah gunung api, Gunung Toba, yang terjadi sekitar 74.000 tahun yang lalu. Dengan luas lebih dari 1.145 kilometer persegi dan kedalaman 450 meter, Danau Toba sebenarnya lebih mirip lautan daripada danau.
 DANAU TOBA
-Cerah Berawan
-Suhu:
-22°C
-Kelembapan:
-84%
-2026-10-22 16:00:00
-Borobudur
-Candi Borobudur, Pusaka Kolosal Magelang, Jawa Tengah. Borobudur adalah sebuah candi Buddha yang terletak di Borobudur, Magelang, Jawa Tengah, Indonesia. Candi ini terletak kurang lebih 100 km di sebelah barat daya Semarang, 86 km di sebelah barat Surakarta, dan 40 km di sebelah barat laut Yogyakarta.
-BOROBUDUR
-Cerah
-Suhu:
-27°C
-Kelembapan:
-71%
-2026-10-22 16:00:00
-BANGKA BELITUNG
-Pariwisata di Bangka Belitung menawarkan berbagai daya tarik, mulai dari keindahan pantai dan pulau hingga kekayaan budaya dan kuliner. Beberapa tempat wisata populer di Belitung antara lain Pantai Tanjung Tinggi, Pulau Lengkuas dengan mercusuar bersejarah.
-BANGKA BELITUNG
-Cerah
-Suhu:
-31°C
-Kelembapan:
-60%
-2026-10-22 16:00:00
-Wakatobi
-Surga Tersembunyi di Sulawesi Tenggara. Mungkin jika menyebut destinasi favorit di Sulawesi Tenggara Wakatobi juga merupakan nama taman nasional dan kabupaten di Sulawesi Tenggara yang memiliki keindahan bawah laut sebagai destinasi wisata.
-WAKATOBI
-Cerah
-Suhu:
-27°C
-Kelembapan:
-80%
-2026-10-22 17:00:00
-Gunung Bromo
-Gunung Bromo atau dalam bahasa Tengger dieja Brama, juga disebut Kaldera Tengger, adalah sebuah gunung berapi aktif di Jawa Timur, Indonesia. Gunung ini memiliki ketinggian 2.614 meter di atas permukaan laut dan berada dalam empat wilayah kabupaten.
-GUNUNG BROMO
-Cerah
+Berawan
 Suhu:
 20°C
 Kelembapan:
-71%
-2026-10-22 16:00:00
+92%
+2026-10-25 20:00:00
+Borobudur
+Candi Borobudur, Pusaka Kolosal Magelang, Jawa Tengah. Borobudur adalah sebuah candi Buddha yang terletak di Borobudur, Magelang, Jawa Tengah, Indonesia. Candi ini terletak kurang lebih 100 km di sebelah barat daya Semarang, 86 km di sebelah barat Surakarta, dan 40 km di sebelah barat laut Yogyakarta.
+BOROBUDUR
+Berawan
+Suhu:
+23°C
+Kelembapan:
+98%
+2026-10-25 20:00:00
+BANGKA BELITUNG
+Pariwisata di Bangka Belitung menawarkan berbagai daya tarik, mulai dari keindahan pantai dan pulau hingga kekayaan budaya dan kuliner. Beberapa tempat wisata populer di Belitung antara lain Pantai Tanjung Tinggi, Pulau Lengkuas dengan mercusuar bersejarah.
+BANGKA BELITUNG
+Berawan
+Suhu:
+28°C
+Kelembapan:
+85%
+2026-10-25 20:00:00
+Wakatobi
+Surga Tersembunyi di Sulawesi Tenggara. Mungkin jika menyebut destinasi favorit di Sulawesi Tenggara Wakatobi juga merupakan nama taman nasional dan kabupaten di Sulawesi Tenggara yang memiliki keindahan bawah laut sebagai destinasi wisata.
+WAKATOBI
+Berawan
+Suhu:
+27°C
+Kelembapan:
+79%
+2026-10-25 21:00:00
+Gunung Bromo
+Gunung Bromo atau dalam bahasa Tengger dieja Brama, juga disebut Kaldera Tengger, adalah sebuah gunung berapi aktif di Jawa Timur, Indonesia. Gunung ini memiliki ketinggian 2.614 meter di atas permukaan laut dan berada dalam empat wilayah kabupaten.
+GUNUNG BROMO
+Udara Kabur
+Suhu:
+17°C
+Kelembapan:
+97%
+2026-10-25 20:00:00
 Raja Ampat
 Raja Ampat dikenal sebagai surga bawah laut terbaik di dunia. Perairannya menjadi rumah bagi lebih dari 75% spesies karang yang ada di dunia, serta ribuan jenis ikan, moluska, dan biota laut lainnya. Para penyelam dari berbagai penjuru dunia datang untuk menyaksikan keindahan taman lautnya.
 RAJA AMPAT
 Udara Kabur
 Suhu:
-28°C
+29°C
 Kelembapan:
-78%
-2026-10-22 18:00:00
+74%
+2026-10-25 22:00:00
 Morotai
 Pulau Morotai adalah sebuah pulau di Kabupaten Pulau Morotai, Maluku Utara, Indonesia.Pulau Morotai juga memiliki sebuah varietas tanaman domestik yaitu kelapa bido yang merupakan favorit sebagai destinasi wisata.
 MOROTAI
-Berawan
+Cerah
 Suhu:
-28°C
+27°C
 Kelembapan:
-77%
-2026-10-22 18:00:00
+80%
+2026-10-25 22:00:00
 MAJALAH ELEKTRONIK
 Lihat
 Panduan Komunikasi Krisis
