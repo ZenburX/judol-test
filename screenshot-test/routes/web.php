@@ -8,12 +8,12 @@ $shotDir = storage_path('screenshots/playwright');
 $classificationFile = storage_path('classification/result.json');
 
 // Helper: jalankan script node sinkron, kembalikan output terakhir
-function runNode(string $script): array
+function runNode(array $scriptArgs): array
 {
     // env lengkap dari php -S, Node crash (CSPRNG) dengan env parsial
     $env = getenv();
 
-    $process = new Process(['node', $script], base_path(), $env);
+    $process = new Process(['node', ...$scriptArgs], base_path(), $env);
     $process->setTimeout(600);
     $process->run();
     $lines = array_filter(explode("\n", $process->getOutput().$process->getErrorOutput()), fn ($l) => trim($l) !== '');
@@ -32,16 +32,27 @@ Route::get('/', function () use ($classificationFile, $shotDir) {
     return view('dashboard', ['content' => 'home', 'results' => $results, 'images' => $images, 'urls' => $urls]);
 });
 
-// Jalankan screenshot / klasifikasi
+// Jalankan screenshot / klasifikasi / keduanya (incremental; pakai all-force untuk ulang semua)
 Route::post('/run/{type}', function (string $type) {
-    $script = match ($type) {
-        'screenshot' => 'scripts/screenshot-playwright.cjs',
-        'classify' => 'scripts/classify-judol.cjs',
+    $plan = match ($type) {
+        'screenshot' => [['scripts/screenshot-playwright.cjs']],
+        'classify' => [['scripts/classify-judol.cjs']],
+        'all' => [['scripts/screenshot-playwright.cjs'], ['scripts/classify-judol.cjs']],
+        'all-force' => [
+            ['scripts/screenshot-playwright.cjs', '--force'],
+            ['scripts/classify-judol.cjs', '--force'],
+        ],
         default => abort(400),
     };
-    $out = runNode($script);
-    return back()->with('run_log', $out['log'])->with('run_ok', $out['ok']);
-});
+    $log = collect();
+    $ok = true;
+    foreach ($plan as $script) {
+        $out = runNode($script);
+        $log = $log->merge($out['log']);
+        $ok = $ok && $out['ok'];
+    }
+    return back()->with('run_log', $log->all())->with('run_ok', $ok);
+})->where('type', 'screenshot|classify|all|all-force');
 
 // Simpan daftar URL
 Route::post('/urls', function (\Illuminate\Http\Request $request) {

@@ -53,5 +53,15 @@
       "h": 512
     },
     "label_teratas": "slot machine game interface, casino jackpot banner with gold coins and money"
+  },
+  {
+    "gambar": "elegan_binamarga_pu_go_id.png",
+    "is_judol": false,
+    "skor": 0.441,
+    "skor_element": 0.029,
+    "keyword_judol": 0,
+    "area_teratas": "tile",
+    "lokasi": null,
+    "label_teratas": "gambling website popup, poker chips and dice"
   }
 ]

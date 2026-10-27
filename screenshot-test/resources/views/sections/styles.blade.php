@@ -112,6 +112,41 @@
             border-bottom: 2px solid var(--border);
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+        }
+        table th, table td {
+            text-align: left;
+            padding: .6rem .75rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: .25rem .6rem;
+            border-radius: 12px;
+            font-size: .75rem;
+            font-weight: 600;
+        }
+        .badge.judol { background: #f8d7da; color: #842029; }
+        .badge.bersih { background: #d1e7dd; color: #0f5132; }
+        .badge.kosong { background: #e2e3e5; color: #41464b; }
+        .badge.blur { background: #e4d4f7; color: #43277a; }
+
+        .mb-3 { margin-bottom: 1rem; }
+        .form-label { display: block; font-size: .9rem; margin-bottom: .3rem; color: var(--muted); }
+        .form-control {
+            width: 100%;
+            padding: .5rem .75rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font: inherit;
+            box-sizing: border-box;
+        }
+
         .btn-action {
             display: inline-block;
             padding: .5rem 1rem;

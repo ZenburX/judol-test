@@ -11,7 +11,7 @@
 <nav class="navbar">
     <a class="logo" href="/">Monitor Judol</a>
     <div class="nav-links">
-        <a href="/" class="active">Beranda</a>
+        <a href="/" class="active">Dashboard</a>
         <a href="/laporan">Laporan</a>
         <a href="/histori">Histori</a>
         <a href="/setting">Setting</a>

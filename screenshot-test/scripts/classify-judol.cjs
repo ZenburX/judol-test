@@ -43,12 +43,25 @@ function makeTiles(width, height) {
     return xs.flatMap((x) => ys.map((y) => ({ x, y })));
 }
 
-async function run(image) {
+async function run() {
+    fs.mkdirSync(outDir, { recursive: true });
+    const force = process.argv.includes("--force");
+    const outFile = path.join(outDir, "result.json");
+    const prev = fs.existsSync(outFile) ? JSON.parse(fs.readFileSync(outFile, "utf8")) : [];
+    const prevNames = new Set(prev.map((r) => r.gambar));
+    const files = fs
+        .readdirSync(shotDir)
+        .filter((f) => f.endsWith(".png") && !f.startsWith("viewport") && (force || !prevNames.has(f)));
+
+    if (files.length === 0) {
+        console.log("SKIP  classify: semua PNG sudah ada di result.json (pakai --force untuk ulang semua).");
+        return;
+    }
+
     const model = await pipeline("zero-shot-image-classification", "Xenova/clip-vit-base-patch32");
 
-    const files = fs.readdirSync(shotDir).filter((f) => f.endsWith(".png") && !f.startsWith("viewport"));
-    const results = [];
-    fs.mkdirSync(outDir, { recursive: true });
+    // hasil lama dipertahankan, entri baru ditambahkan di belakangnya
+    const results = [...prev];
 
     for (const file of files) {
         const fullPath = path.join(shotDir, file);
@@ -110,7 +123,6 @@ async function run(image) {
         console.log(`${res.is_judol ? "JUDOL" : "BERSIH"}  ${file}  el=${res.skor_element} kw=${keyword}`);
     }
 
-    const outFile = path.join(outDir, "result.json");
     fs.writeFileSync(outFile, JSON.stringify(results, null, 2));
     const nJudol = results.filter((r) => r.is_judol).length;
     console.log(`\nSelesai: ${nJudol}/${results.length} terdeteksi judol -> ${outFile}`);

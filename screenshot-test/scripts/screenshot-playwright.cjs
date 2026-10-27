@@ -1,20 +1,25 @@
-// Screenshot full-page semua URL di urls.js pakai Playwright (Chromium).
 const { chromium } = require("playwright");
 const fs = require("fs");
 const path = require("path");
 const urls = require("./urls.cjs");
 
 const outDir = path.resolve(__dirname, "../storage/screenshots/playwright");
+const force = process.argv.includes("--force");
 
 (async () => {
+    fs.mkdirSync(outDir, { recursive: true });
     for (const url of urls) {
-        const browser = await chromium.launch();
-        const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+        let browser;
         try {
+            const name = new URL(url).hostname.replace(/\./g, "_");
+            if (!force && fs.existsSync(path.join(outDir, `${name}.png`))) {
+                console.log(`SKIP  playwright: ${url} (PNG sudah ada)`);
+                continue;
+            }
+            browser = await chromium.launch();
+            const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
             await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
             await page.waitForTimeout(3000);
-            fs.mkdirSync(outDir, { recursive: true });
-            const name = new URL(url).hostname.replace(/\./g, "_");
             const file = path.join(outDir, `${name}.png`);
             // scroll bertahap supaya img lazy-load sempat ter-load sebelum screenshot
             await page.evaluate(async () => {
@@ -54,7 +59,7 @@ const outDir = path.resolve(__dirname, "../storage/screenshots/playwright");
         } catch (e) {
             console.error(`FAIL playwright: ${url} -> ${e.message}`);
         } finally {
-            await browser.close();
+            if (browser) await browser.close();
         }
     }
 })();
